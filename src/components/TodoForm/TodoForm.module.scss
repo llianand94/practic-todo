@@ -1,28 +1,40 @@
+@use '/src/common/styles/variables' as var;
+@use '/src/common/styles/templates' ;
+
 .container{
-  display: block;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   position: relative;
   height: 2.5rem;
-  margin-top: 0;
   margin-bottom: 0;
-  border-bottom: 1px solid rgb(182, 138, 62);  
-  // background-color: red;
-  button{
-    height: 2rem;
+  padding: 0.5rem 1.5rem;
+  
+    button{
+    @extend %buttons;
     text-transform: uppercase;
+    
   }
 }
 .field{
-  height: 1.5rem;
-  outline: none;
+  align-self: stretch;
+  width: 85%; 
+  padding: 0;
   border: none;
-  background-color: moccasin;
+  border-bottom: 1px solid var.$formBorderColor;
+  background-color: var.$formBgColor;
+  font-size: 1rem;
+  &::placeholder{
+    font-size: 1rem;
+    color: var.$headerColor;
+  }
 }
 .error{
   position: absolute;
   height: 1.3rem;
   width: 60%;
-  left: 0;
-  bottom: -0.5rem;
+  left: 3rem;
+  bottom: -1rem;
   right: 0;
   border: 1px solid #656581;
   background-color: #a0a0c5;

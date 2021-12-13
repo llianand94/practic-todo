@@ -7,14 +7,16 @@ import styles from './Todo.module.scss'
 const Todo = () => {
   const {tasks, setTasks, addTasks, setDone, deleteTask} = useTodo([{
     id: Date.now(),
-    body: 'Empty text of task',
+    body: null,
     isDone: false
   }])
+
   return (
+    
     <div className={styles.container}>
       <h1 className={styles.header}>To-do list</h1>
       <TodoForm  addTasks={addTasks}/>
-      <TodoList tasks={tasks} setDone={setDone} deleteTask={deleteTask}/>
+      {tasks.length>1&& <TodoList tasks={tasks} setDone={setDone} deleteTask={deleteTask}/>}
       
     </div>
   );

@@ -1,21 +1,28 @@
-.container{
-  padding-inline-start: 0;
-  text-align: start;
-  list-style: none;
+@use '/src/common/styles/variables' as var;
+@use '/src/common/styles/templates';
+
+.container{  
+  padding: 1rem 1.5rem;
+  text-align: start;  
 
 }
 .itemWrapper{
-  display: flex;
-  width: 60%;
-  justify-content: stretch;
+  display: flex;   
   padding: 0.5rem;
-  
-  span{
-    width: 80px;
-    margin-left: auto;
-    text-align: center;
-    border: 1px solid rgb(67, 114, 67);
-    background-color: palegreen;
-    cursor: pointer;
-  }
+  border-bottom: 1px solid var.$formBorderColor;
+}
+.item{
+  max-width: 65%;
+}
+.condition{
+  margin-left: auto;
+  text-align: center;
+  line-height: 2.5rem;
+  vertical-align: middle;
+  border: 1px solid rgb(67, 114, 67);
+  background-color: palegreen;
+  @extend %buttons;
+}
+.delete{
+  @extend %buttons;
 }
