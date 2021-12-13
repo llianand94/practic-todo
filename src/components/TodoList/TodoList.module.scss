@@ -1,0 +1,21 @@
+.container{
+  padding-inline-start: 0;
+  text-align: start;
+  list-style: none;
+
+}
+.itemWrapper{
+  display: flex;
+  width: 60%;
+  justify-content: stretch;
+  padding: 0.5rem;
+  
+  span{
+    width: 80px;
+    margin-left: auto;
+    text-align: center;
+    border: 1px solid rgb(67, 114, 67);
+    background-color: palegreen;
+    cursor: pointer;
+  }
+}

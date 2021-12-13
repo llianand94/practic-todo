@@ -1,0 +1,16 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  &>*:not(h1){
+    background-color: moccasin;
+    border: 1px solid rgb(182, 138, 62);
+    border-bottom: 3px solid rgb(182, 138, 62);
+  }
+}
+.header{
+  margin-top: 0;
+  background-color: rgb(101, 101, 182);
+  text-align: center;
+  color: antiquewhite;
+}
