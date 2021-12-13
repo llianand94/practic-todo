@@ -19,14 +19,15 @@
 .field{
   align-self: stretch;
   width: 85%; 
-  padding: 0;
+  padding: 0 1rem;
+  
   border: none;
   border-bottom: 1px solid var.$formBorderColor;
   background-color: var.$formBgColor;
   font-size: 1rem;
   &::placeholder{
     font-size: 1rem;
-    color: var.$headerColor;
+    color: var.$headerBgColor;
   }
 }
 .error{

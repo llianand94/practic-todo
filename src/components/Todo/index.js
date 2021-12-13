@@ -5,11 +5,7 @@ import TodoList from '../TodoList';
 import styles from './Todo.module.scss'
 
 const Todo = () => {
-  const {tasks, setTasks, addTasks, setDone, deleteTask} = useTodo([{
-    id: Date.now(),
-    body: null,
-    isDone: false
-  }])
+  const {tasks, setTasks, addTasks, setDone, deleteTask} = useTodo()
 
   return (
     

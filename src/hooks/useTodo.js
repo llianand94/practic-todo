@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-const useTodo = (initialValues) => {
-  const [tasks, setTasks] = useState([...initialValues]);
+const useTodo = () => {
+  const [tasks, setTasks] = useState([{
+    id: Date.now(),
+    body: null,
+    isDone: false
+  }]);
   return {
     tasks,
     setTasks,
