@@ -12,7 +12,7 @@ const Todo = () => {
     <div className={styles.container}>
       <h1 className={styles.header}>To-do list</h1>
       <TodoForm  addTasks={addTasks}/>
-      {tasks.length>1&& <TodoList tasks={tasks} setDone={setDone} deleteTask={deleteTask}/>}
+      {tasks.length>1 && <TodoList tasks={tasks} setDone={setDone} deleteTask={deleteTask}/>}
       
     </div>
   );
