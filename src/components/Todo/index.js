@@ -5,14 +5,18 @@ import TodoList from '../TodoList';
 import styles from './Todo.module.scss'
 
 const Todo = () => {
-  const {tasks, setTasks, addTasks, setDone, deleteTask} = useTodo()
+  const {tasks,  setTasks, addTasksAction, setDoneAction, deleteTaskAction, filterTasksAction} = useTodo();
 
+  const easyFunc = (val) =>{console.log('Enter selector', val)
+return 2+1;}
   return (
     
     <div className={styles.container}>
       <h1 className={styles.header}>To-do list</h1>
-      <TodoForm  addTasks={addTasks}/>
-      {tasks.length>1 && <TodoList tasks={tasks} setDone={setDone} deleteTask={deleteTask}/>}
+      <TodoForm  addTasksAction={addTasksAction} filterTasksAction={filterTasksAction} easyFunc={easyFunc}/>
+      {tasks.length>1 && 
+      <TodoList tasks={tasks} setDoneAction={setDoneAction} deleteTaskAction={deleteTaskAction}/> }
+      
       
     </div>
   );

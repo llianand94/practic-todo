@@ -22,6 +22,16 @@
   border: 1px solid rgb(67, 114, 67);
   background-color: rgb(81, 121, 81);
   @extend %buttons;
+  &:hover{
+    background-color: rgb(164, 209, 164);
+  }
+}
+.done{
+  background-color: rgb(164, 209, 164);
+  border: 1px solid rgb(67, 114, 67);
+  &:hover{
+    background-color: rgb(81, 121, 81);
+  }
 }
 .delete{
   @extend %buttons;

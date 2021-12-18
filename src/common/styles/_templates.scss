@@ -7,8 +7,8 @@
   color: var.$headerColor;
   cursor: pointer;
   &:hover{
-    border: 1px solid rgb(115, 192, 115);
-    background-color: rgb(164, 233, 164);
+    border: 1px solid var.$formBorderColor;
+    background-color: #ababf0ec;
     color: rgb(10, 20, 10);
   }
 }
