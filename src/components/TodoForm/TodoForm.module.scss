@@ -9,29 +9,28 @@
   height: 2.5rem;
   margin-bottom: 0;
   padding: 0.5rem 1.5rem;
-  
     button{
     @extend %buttons;
     text-transform: uppercase;
-    
   }
 }
-.selectContainer{
-  
-}
+
 .field{
   align-self: stretch;
-  width: 85%; 
-  padding: 0 1rem;
-  
+  width: 60%; 
+  padding: 0 1rem;  
   border: none;
   border-bottom: 1px solid var.$formBorderColor;
   background-color: var.$formBgColor;
   font-size: 1rem;
+  color: var.$headerBgColor;
   &::placeholder{
     font-size: 1rem;
     color: var.$headerBgColor;
   }
+}
+.selectContainer{
+  width: 30%; 
 }
 .error{
   position: absolute;

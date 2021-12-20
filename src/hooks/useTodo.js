@@ -48,7 +48,7 @@ const useTodo = () => {
     addTasksAction:({body})=>dispatch({type:actionsList.ADD_TASKS, value:body}),
     setDoneAction: (id)=>    dispatch({type:actionsList.SET_DONE, id}),
     deleteTaskAction: (id)=> dispatch({type:actionsList.DELETE_TASK, id}), 
-    fiterTasksAction: ({target}) =>dispatch({type:actionsList.FILTER_TASKS, value:target.value })
+    filterTasksAction: ({target}) =>dispatch({type:actionsList.FILTER_TASKS, value:target.value })
   }
 }
 export default useTodo;

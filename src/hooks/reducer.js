@@ -10,6 +10,7 @@ const reducer = (tasks, action) => {
         id: Date.now(),
         body: value,
         isDone: false,
+        isDelete: false
       };
       return [...tasks, newTask];
     }
@@ -23,20 +24,20 @@ const reducer = (tasks, action) => {
       return newTasks;
     }
     case actionsList.DELETE_TASK: {
-      const newTasks = tasks.filter((item) => id !== item.id);
+      const newTasks = tasks.map((item)=>({...item, isDelete:!item.isDelete})).filter((item) => id !== item.id);
       return newTasks;
     }
 
     case actionsList.FILTER_TASKS: {
       console.log('Enter filter');
       switch (value) {
-        case 'done':{
+        case "done":{
           const newTasks = tasks.filter((item) =>  item.isDone);
-        return newTasks;}
-
-        case 'delete':{
-          const newTasks = tasks.filter((item) =>  !item.isDone);
         return newTasks;
+        }
+        case "current":{
+          const newTasks = tasks.filter((item) =>  !item.isDone);
+          return newTasks;
         }
         default:
           return tasks;
