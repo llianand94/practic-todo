@@ -1,0 +1,9 @@
+@use '/src/common/styles/templates';
+
+.select{
+  align-self: stretch;
+  width: 25%; 
+  padding: 0.3rem 1rem;
+  font-weight: 600;  
+  @extend %fieldStyle;
+ }

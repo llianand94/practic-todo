@@ -1,5 +1,5 @@
 import React from "react";
-import actionsList from "./actionsList";
+import actionsList from "../actions/actionsList";
 
 const reducer = (tasks, action) => {
   console.log("action !! : ", action);
@@ -28,21 +28,20 @@ const reducer = (tasks, action) => {
       return newTasks;
     }
 
-    case actionsList.FILTER_TASKS: {
-      console.log('Enter filter');
-      switch (value) {
-        case "done":{
-          const newTasks = tasks.filter((item) =>  item.isDone);
-        return newTasks;
-        }
-        case "current":{
-          const newTasks = tasks.filter((item) =>  !item.isDone);
-          return newTasks;
-        }
-        default:
-          return tasks;
-      }
-    }
+    // case actionsList.FILTER_TASKS: {
+    //  switch (value) {
+    //     case "done":{
+    //       const newTasks = tasks.filter((item) =>  item.isDone);
+    //     return newTasks;
+    //     }
+    //     case "current":{
+    //       const newTasks = tasks.filter((item) =>  !item.isDone);
+    //       return newTasks;
+    //     }
+    //     default:
+    //       return tasks;
+    //   }
+    // }
 
     default:
       return tasks;

@@ -3,34 +3,20 @@
 
 .container{
   display: flex;
+  width: 55%;
   align-items: flex-end;
   justify-content: flex-end;
   position: relative;
-  height: 2.5rem;
-  margin-bottom: 0;
-  padding: 0.5rem 1.5rem;
-    button{
-    @extend %buttons;
-    text-transform: uppercase;
-  }
+  height: 2.5rem;    
 }
-
 .field{
   align-self: stretch;
-  width: 60%; 
-  padding: 0 1rem;  
-  border: none;
-  border-bottom: 1px solid var.$formBorderColor;
-  background-color: var.$formBgColor;
-  font-size: 1rem;
-  color: var.$headerBgColor;
-  &::placeholder{
-    font-size: 1rem;
-    color: var.$headerBgColor;
-  }
+  padding: 0 1rem;
+  @extend %fieldStyle;
 }
-.selectContainer{
-  width: 30%; 
+.btn{
+  text-transform: uppercase;
+  @extend %buttons;  
 }
 .error{
   position: absolute;

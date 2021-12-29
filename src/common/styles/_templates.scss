@@ -12,3 +12,14 @@
     color: rgb(10, 20, 10);
   }
 }
+%fieldStyle{  
+  border: 1px solid var.$formBorderColor;
+  border-bottom: 1px solid var.$formBorderColor;
+  background-color: var.$inputBgColor;
+  font-size: 1rem;
+  color: var.$headerBgColor;
+  &::placeholder{
+    font-size: 1rem;
+    color: var.$headerBgColor;
+  }
+}
