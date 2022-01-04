@@ -11,7 +11,7 @@ const TodoForm = (props) => {
     <Formik initialValues={{ body: "" }}  onSubmit={addTasksAction} validationSchema={todoScheme}>
       <Form className={styles.container}>
         <Field className={styles.field} name="body" placeholder='Enter any task'/>
-        <ErrorMessage className={styles.error} name="body" component="span"></ErrorMessage>
+        <ErrorMessage className={styles.error} name="body" component="span"/>
         <button className={styles.btn} type="submit">Add</button>
       </Form>
     </Formik>

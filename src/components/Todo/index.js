@@ -6,13 +6,8 @@ import TodoList from '../TodoList';
 import styles from './Todo.module.scss'
 
 const Todo = () => {
-  const {tasks,  setTasks, addTasksAction, setDoneAction, deleteTaskAction, 
-    // filterTasksAction
-  } = useTodo();
-  const getSelectorValue = ({target})=>{
-    console.log(target.value);
-    return toString(target.value)};    
-   
+  const {tasks, selectorValue, addTasksAction, setDoneAction, deleteTaskAction, selectorTasksAction} = useTodo();
+ 
   const renderTodoList = (value) =>{
      console.log(value);
     switch (value) {
@@ -34,13 +29,9 @@ const Todo = () => {
       <h1 className={styles.header}>To-do list</h1>
       <div className={styles.wrapper}>
         <TodoForm  addTasksAction={addTasksAction}/>
-        <Selector getSelectorValue={getSelectorValue}
-        // filterTasksAction={filterTasksAction}
-        />
+        <Selector  selectorTasksAction={selectorTasksAction}/>
       </div>
-      {renderTodoList("all")}
-      
-      {/* <TodoList tasks={tasks} setDoneAction={setDoneAction} deleteTaskAction={deleteTaskAction}/> */}
+      {renderTodoList(selectorValue)}
     </div>
   );
 }
